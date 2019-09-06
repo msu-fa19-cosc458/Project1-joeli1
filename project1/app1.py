@@ -9,7 +9,7 @@ app = flask.Flask(__name__)
 
 @app.route('/') 
 def index(): 
-    ##twitter api...hopefully
+    #Set Up Twitter API
     twitter_url = "https://api.twitter.com/1.1/search/tweets.json?q=Beyonce"
     random_tweet = random.randint(0,14)
     oauth = requests_oauthlib.OAuth1(
@@ -21,10 +21,12 @@ def index():
     response = requests.get(twitter_url, auth=oauth)
     json_body = response.json()
     tweets_about_beyonce = json_body['statuses'][random_tweet]['text']
+    print(response.json())
     
+
     
-    
-    #Set Up Genius
+
+    #Set Up Genius API
     #basic information
     genius_url = "https://api.genius.com/search?q=Beyonce"
     my_headers = {"Authorization": "Bearer 9Z1vNErMoWax7Ly0N4_lofj35lnP2NOgDVde0C0h8M5HO0sh09sggU0rXwhDFOQU"}
@@ -37,6 +39,5 @@ def index():
     artist = json_body["response"]["hits"][playlist]["result"]['primary_artist']['name']
     return flask.render_template("index.html", song = song, pic= pic, artist = artist, tweets_about_beyonce= tweets_about_beyonce)
     
+    
 app.run(port=int(os.getenv('PORT', 8080)), host=os.getenv('IP', '0.0.0.0'))
-
-index()
