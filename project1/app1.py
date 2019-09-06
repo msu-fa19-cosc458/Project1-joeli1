@@ -4,8 +4,14 @@ import requests
 import random
 import requests_oauthlib
 import json
+import tweepy
 
 app = flask.Flask(__name__)
+
+#twitter/tweepy keys
+auth = tweepy.OAuthHandler("1g57GGgJ7CBOPpGooj9MUKYFk", "C9aFUfRIT1Ad0nB9DN4N0Cn0iQ114kXn2t8dM72NGk0ZH1eoiz")
+auth.set_access_token("325816963-WBa7ftnAd0H6TwJomBjQr3A1fzOd7Ob1PyQFJbAe", "fg4SmCQ0oBAc10P4OD7SWo6rx7QdtZxvwkN8zUlTdvjy3")
+api = tweepy.API(auth)
 
 @app.route('/') 
 def index(): 
