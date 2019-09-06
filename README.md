@@ -1,16 +1,14 @@
-What was the theme you chose?
-Female entertainers 
+         ___        ______     ____ _                 _  ___  
+        / \ \      / / ___|   / ___| | ___  _   _  __| |/ _ \ 
+       / _ \ \ /\ / /\___ \  | |   | |/ _ \| | | |/ _` | (_) |
+      / ___ \ V  V /  ___) | | |___| | (_) | |_| | (_| |\__, |
+     /_/   \_\_/\_/  |____/   \____|_|\___/ \__,_|\__,_|  /_/ 
+ ----------------------------------------------------------------- 
 
-How did you pick your searches to fit the theme?
-I searched Beyonce. 
 
-What are at least 3 issues you encountered with your project? How did you fix them?
--Authentication Bearer: I had to remove the dash in order for genius to work.
--Style: while it wasn't a necessity, i wanted to improve the layout of the webpage
--Heroku: trying to push to heroku was extremely difficult. In order to fix the issue, I had to update my requirements.txt file.
+Hi there! Welcome to AWS Cloud9!
 
-What are known problems, if any, with your project?
-I cannot control the language of the tweets - I'm not sure how I would go about fixing that issue.
+To get started, create some files, play with the terminal,
+or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
 
-What would you do to improve your project in the future?
-To improve my project in the future, I would update the layout to make it easier to understand for the user. I would also filter the tweets to make all them PG to PG-13.
+Happy coding!
