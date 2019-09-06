@@ -4,7 +4,7 @@ import requests
 import random
 import requests_oauthlib
 import json
-import tweepy
+
 
 app = flask.Flask(__name__)
 
