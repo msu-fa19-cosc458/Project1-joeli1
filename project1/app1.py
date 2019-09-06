@@ -9,15 +9,15 @@ import tweepy
 app = flask.Flask(__name__)
 
 #twitter/tweepy keys
-auth = tweepy.OAuthHandler("1g57GGgJ7CBOPpGooj9MUKYFk", "C9aFUfRIT1Ad0nB9DN4N0Cn0iQ114kXn2t8dM72NGk0ZH1eoiz")
-auth.set_access_token("325816963-WBa7ftnAd0H6TwJomBjQr3A1fzOd7Ob1PyQFJbAe", "fg4SmCQ0oBAc10P4OD7SWo6rx7QdtZxvwkN8zUlTdvjy3")
-api = tweepy.API(auth)
+# auth = tweepy.OAuthHandler("1g57GGgJ7CBOPpGooj9MUKYFk", "C9aFUfRIT1Ad0nB9DN4N0Cn0iQ114kXn2t8dM72NGk0ZH1eoiz")
+# auth.set_access_token("325816963-WBa7ftnAd0H6TwJomBjQr3A1fzOd7Ob1PyQFJbAe", "fg4SmCQ0oBAc10P4OD7SWo6rx7QdtZxvwkN8zUlTdvjy3")
+# api = tweepy.API(auth)
 
 @app.route('/') 
 def index(): 
     #Set Up Twitter API
     twitter_url = "https://api.twitter.com/1.1/search/tweets.json?q=Beyonce"
-    random_tweet = random.randint(0,14)
+    random_tweet = random.randint(0,20)
     oauth = requests_oauthlib.OAuth1(
         "1g57GGgJ7CBOPpGooj9MUKYFk", 
         "C9aFUfRIT1Ad0nB9DN4N0Cn0iQ114kXn2t8dM72NGk0ZH1eoiz",
@@ -28,8 +28,6 @@ def index():
     json_body = response.json()
     tweets_about_beyonce = json_body['statuses'][random_tweet]['text']
     print(response.json())
-    
-
     
 
     #Set Up Genius API
